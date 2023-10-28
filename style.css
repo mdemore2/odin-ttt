@@ -4,6 +4,9 @@
     font-family: 'Roboto', sans-serif;
     font-size: 64px;
     list-style: none;
+    background-color: #24527a;
+    color: #e0ebeb;
+    --border: solid #a7bcb9 2px;
 }
 
 body{
@@ -23,7 +26,6 @@ body{
 .space{
     display: flex;
     aspect-ratio: 1 / 1;
-    border: solid black 2px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -39,4 +41,12 @@ dialog{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.space:not(:nth-child(3n)) {
+    border-right: var(--border);
+  }
+  
+  .space:not(:nth-last-child(-n + 3)) {
+    border-bottom: var(--border);
   }
