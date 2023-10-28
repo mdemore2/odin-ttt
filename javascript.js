@@ -1,6 +1,5 @@
-console.log('Loaded')
 let board = [["", "", ""],["", "", ""],["", "", ""]];
-let turn = 'x';
+let turn = 'X';
 const dialog = document.querySelector('dialog');
 
 
@@ -11,13 +10,12 @@ spaces.forEach((space) => {
 })
 
 function updateBoard(e) {
-    console.log('DIV CLICKED')
     e.currentTarget.innerHTML = turn;
     let spaceID = e.currentTarget.id;
     let row = Math.floor(spaceID / 3);
     let col = spaceID % 3;
     board[row][col] = turn;
-    turn = turn == 'x' ? 'o' : 'x';
+    turn = turn == 'X' ? 'O' : 'X';
     e.currentTarget.removeEventListener('click',updateBoard)
     let winner = checkWin();
     if (winner) {
