@@ -21,8 +21,6 @@ body{
     grid-template-rows: 1fr 1fr 1fr;
 }
 
-
-
 .space{
     display: flex;
     aspect-ratio: 1 / 1;
@@ -45,8 +43,8 @@ dialog{
 
 .space:not(:nth-child(3n)) {
     border-right: var(--border);
-  }
+}
   
-  .space:not(:nth-last-child(-n + 3)) {
+.space:not(:nth-last-child(-n + 3)) {
     border-bottom: var(--border);
-  }
+}
